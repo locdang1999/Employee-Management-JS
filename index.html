@@ -1,0 +1,105 @@
+<!-- Hoàn thiện tính năng chỉnh sửa và sử dụng localstorage lưu trữ. Kiếm tra hợp lệ input 
+
++ Mã nhân viên tối đa 4 - 6 ký số
+
++ Tên nhân viên phải là chữ
+
++ Lương cơ bản 1 000 000 - 20 000 000 
+
++ Số giờ làm trong tháng 50 - 150 giờ  -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Quản lý nhân viên</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row border border-dark">
+      <h1 class="text-white text-center bg-dark cq">Quản lý nhân viên</h1>
+      <div class="col-12">
+        <div class="form-group">
+          <p>Mã nhân viên</p>
+          <input type="text" id="maNV" class="form-control">
+          <p class="text text-danger" id="ktRong-maNV"></p>
+          <p class="text text-danger" id="ktDoDai-maNV" style="top: -16px;"></p>
+          <p class="text text-danger" id="ktSo-maNV" style="top: -16px;"></p>
+        </div>
+        <div class="form-group">
+          <p>Tên nhân viên</p>
+          <input type="text" id="tenNV" class="form-control">
+          <p class="text text-danger" id="ktRong-tenNV"></p>
+          <p class="text-danger text" id="ktChu-tenNV" style="top: -16px;"></p>
+        </div>
+        <div class="form-group">
+          <p>Chức vụ</p>
+          <select name="" id="chucVu" class="form-control">
+            <option value="3">Giám đốc</option>
+            <option value="2">Quản lý</option>
+            <option value="1">Nhân viên</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p>Lương cơ bản</p>
+          <input type="text" id="luongCB" class="form-control">
+          <p class="text text-danger" id="ktRong-luongCB"></p>
+          <p class="text-danger text" id="ktLuong-luongCB" style="top: -16px;"></p>
+        </div>
+        <div class="form-group">
+          <p>Số giờ làm trong tháng</p>
+          <input type="text" id="gioLam" class="form-control">
+          <p class="text text-danger" id="ktRong-gioLam"></p>
+          <p class="text-danger text" id="ktGioLam-gioLam" style="top: -16px;"></p>
+        </div>
+      </div>
+      <div class="form-group text-right bg-light vb">
+        <button id="btn-Them" class="btn text-success border-success">Thêm nhân viên</button>
+        <button id="btn-Luu" class="btn text-primary border-primary" style="opacity: 0;">Lưu thông tin</button>
+      </div>
+    </div>
+    <table class="table">
+      <thead>
+        <tr class="bg-primary text-white">
+          <th>Mã nhân viên</th>
+          <th>Tên nhân viên</th>
+          <th>Chức vụ</th>
+          <th>Lương cơ bản</th>
+          <th>Tổng lương</th>
+          <th>Giờ làm/tháng</th>
+          <th>Xếp loại nhân viên</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="table-NhanVien">
+
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="./js/NhanVien.js"></script>
+  <script src="./model/Validation.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

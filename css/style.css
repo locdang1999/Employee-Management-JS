@@ -1,0 +1,19 @@
+.cq{
+    height: 75px;
+    padding-top: 10px;
+    width: 1200px;
+}
+.vb{
+    height: 60px;
+    padding-top: 10px;
+    padding-right: 15px;
+    width: 1200px;
+    margin-bottom: 0px;
+}
+@media all and (min-width: 1025px) {
+    .table{
+        margin-top: 25px;
+        margin-left: -15px;
+        width: 1140px;
+    }
+} 
